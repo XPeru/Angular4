@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+.done-true {
+	text-decoration: line-through;
+	color: red;
+}
+
+.headerXWebApp {
+	background-color: #202347;
+	color: #FFFFFF;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.homepage {
+	background-color: #202347;
+	color: #FFFFFF;
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
+
+.homepage h1 {
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	font-variant: small-caps;
+}
+
+.btn_separate {
+	margin: 2px;
+}
+
+.underheader {
+	margin-top: 70px;
+}
+
+.leftmargin {
+	margin-left: 250px;
+	margin-right: 0;
+}
+
+.button_cell {
+	width: 120px;
+}
+
+
+@media (max-width: 767px) {
+	.leftmargin {
+		margin-left: 5px;
+		margin-right: 5px;
+		border-right: 1px;
+		padding-right: 1px;
+	}
+
+	.buttonhide {
+		display: none;
+	}
+
+	.underheader {
+		margin-top: 110px;
+	}
+}
+.list_home {
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	text-align: center;
+}
+
+.list_home a {
+	padding-top: 10%;
+	background-color: #202347;
+	padding-bottom: 10%;
+	color: #FFFFFF;
+
+}
+.blue { color: blue;  }
+
+.grid {
+	width: 100%;
+	height: 80%;
+}
+
+.my-custom-menu {
+	position: absolute;
+}
+
+.my-custom-menu .ui-grid-menu {
+	padding: 0px;
+}
+
+.my-custom-menu .ui-grid-menu-inner {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.rotated {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+}
+
+.ui-grid-menu-button {
+	height: 31px;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+	transition: all linear 0.15s;
+}
+
+.animate-show.ng-hide {
+	line-height: 0;
+	opacity: 0;
+	padding: 0 10px;
+}
