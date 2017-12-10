@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { Home } from './home.menu/home.menu.component';
+import { HomeMenuComponent } from './home-menu/home-menu.component';
 
 const appRoutes: Routes = [
   {
@@ -20,7 +20,7 @@ const appRoutes: Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    Home.MenuComponent
+    HomeMenuComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
