@@ -1,12 +1,16 @@
 
 <div class ="row">
-  <app-home-menu [data]=dashboard></app-home-menu>
-  <app-home-menu [data]=usuario></app-home-menu>
-  <app-home-menu [data]=almacen></app-home-menu>
-  <app-home-menu [data]=articulo></app-home-menu>
+  <app-home-menu [data]=dashboard (messageEvent)="receiveMessage($event)"></app-home-menu>
+  <app-home-menu [data]=usuario (messageEvent)="receiveMessage($event)"></app-home-menu>
+  <app-home-menu [data]=almacen (messageEvent)="receiveMessage($event)"></app-home-menu>
+  <app-home-menu [data]=articulo (messageEvent)="receiveMessage($event)"></app-home-menu>
 </div>
 
 <div class ="row">
-  <app-home-menu [data]=cliprov></app-home-menu>
-  <app-home-menu [data]=movimiento></app-home-menu>
+  <app-home-menu [data]=cliprov (messageEvent)="receiveMessage($event)"></app-home-menu>
+  <app-home-menu [data]=movimiento (messageEvent)="receiveMessage($event)"></app-home-menu>
+</div>
+
+<div class="row">
+  {{message}}
 </div>

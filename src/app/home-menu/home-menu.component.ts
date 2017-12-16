@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Menu } from './menu';
+
 
 @Component({
   selector: 'app-home-menu',
@@ -6,7 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./home-menu.component.css']
 })
 export class HomeMenuComponent implements OnInit {
-  @Input() data;
+  @Input() data : Menu;
+  @Output() messageEvent = new EventEmitter<string>();
+
+  sendMessage() {
+    this.messageEvent.emit(this.data.stringMenu);
+  }
   constructor() { }
 
   ngOnInit() {
