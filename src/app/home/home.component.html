@@ -6,6 +6,36 @@
   <app-home-menu [data]=articulo (messageEvent)="receiveMessage($event)"></app-home-menu>
 </div>
 
+<div class="back-red">
+  <div class="row">
+    <app-home-sub-menu *ngFor="let submenu of userSubMenus" [data]=submenu></app-home-sub-menu>
+  </div>
+</div>
+
+<div class="back-green">
+  <div class="row">
+    <app-home-sub-menu *ngFor="let submenu of almacenSubMenus" [data]=submenu></app-home-sub-menu>
+  </div>
+</div>
+
+<div class="back-blue">
+  <div class="row">
+    <app-home-sub-menu *ngFor="let submenu of articuloSubMenus" [data]=submenu></app-home-sub-menu>
+  </div>
+</div>
+
+<div class="back-purple">
+  <div class="row">
+    <app-home-sub-menu *ngFor="let submenu of cliprovSubMenus" [data]=submenu></app-home-sub-menu>
+  </div>
+</div>
+
+<div class="back-orange">
+  <div class="row">
+    <app-home-sub-menu *ngFor="let submenu of movimientoSubMenus" [data]=submenu></app-home-sub-menu>
+  </div>
+</div>
+
 <div class ="row">
   <app-home-menu [data]=cliprov (messageEvent)="receiveMessage($event)"></app-home-menu>
   <app-home-menu [data]=movimiento (messageEvent)="receiveMessage($event)"></app-home-menu>

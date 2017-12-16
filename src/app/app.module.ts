@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { HomeMenuComponent } from './home-menu/home-menu.component';
+import { HomeSubMenuComponent } from './home-sub-menu/home-sub-menu.component';
 
 const appRoutes: Routes = [
   {
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    HomeMenuComponent
+    HomeMenuComponent,
+    HomeSubMenuComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
