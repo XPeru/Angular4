@@ -1,6 +1,6 @@
 
 <div class ="row">
-  <app-home-menu [data]=dashboard (messageEvent)="receiveMessage($event)"></app-home-menu>
+  <app-home-menu [data]=dashboard (messageEvent)="receiveMessage($event)" routerLink="/usuario"></app-home-menu>
   <app-home-menu [data]=usuario (messageEvent)="receiveMessage($event)"></app-home-menu>
   <app-home-menu [data]=almacen (messageEvent)="receiveMessage($event)"></app-home-menu>
   <app-home-menu [data]=articulo (messageEvent)="receiveMessage($event)"></app-home-menu>

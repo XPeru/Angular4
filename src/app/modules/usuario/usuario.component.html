@@ -1,0 +1,38 @@
+<div>
+  <mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="NOMBRE">
+        <mat-header-cell *matHeaderCellDef> NOMBRE </mat-header-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.NOMBRE}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="APELLIDOS">
+        <mat-header-cell *matHeaderCellDef> APELLIDOS </mat-header-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.APELLIDOS}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="EMAIL">
+        <mat-header-cell *matHeaderCellDef> EMAIL </mat-header-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.EMAIL}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="IMAGEN">
+        <mat-header-cell *matHeaderCellDef> IMAGEN </mat-header-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.IMAGEN}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="TIPO">
+        <mat-header-cell *matHeaderCellDef> TIPO </mat-header-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.TIPO}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="CREATE_TIME">
+        <mat-header-cell *matHeaderCellDef> CREATE_TIME </mat-header-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.CREATE_TIME}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="UPDATE_TIME">
+        <mat-header-cell *matHeaderCellDef> UPDATE_TIME </mat-header-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.UPDATE_TIME}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="IS_ACTIVE">
+        <mat-header-cell *matHeaderCellDef> IS_ACTIVE </mat-header-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.IS_ACTIVE}}</mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>

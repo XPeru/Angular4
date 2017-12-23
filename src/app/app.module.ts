@@ -8,11 +8,20 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { HomeMenuComponent } from './home-menu/home-menu.component';
 import { HomeSubMenuComponent } from './home-sub-menu/home-sub-menu.component';
+import { UsuarioComponent } from './modules/usuario/usuario.component';
+import { MatTableModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { UsuarioService } from './services/usuario.service';
+
 
 const appRoutes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'usuario',
+    component: UsuarioComponent
   }
 ];
 
@@ -22,13 +31,16 @@ const appRoutes: Routes = [
     NavbarComponent,
     HomeComponent,
     HomeMenuComponent,
-    HomeSubMenuComponent
+    HomeSubMenuComponent,
+    UsuarioComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
-    BrowserModule
+    BrowserModule,
+    MatTableModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
