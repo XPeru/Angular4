@@ -22,11 +22,11 @@
       </ng-container>
       <ng-container matColumnDef="CREATE_TIME">
         <mat-header-cell *matHeaderCellDef> CREATE_TIME </mat-header-cell>
-        <mat-cell *matCellDef= "let usuario"> {{usuario.CREATE_TIME}}</mat-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.CREATE_TIME | date}}</mat-cell>
       </ng-container>
       <ng-container matColumnDef="UPDATE_TIME">
         <mat-header-cell *matHeaderCellDef> UPDATE_TIME </mat-header-cell>
-        <mat-cell *matCellDef= "let usuario"> {{usuario.UPDATE_TIME}}</mat-cell>
+        <mat-cell *matCellDef= "let usuario"> {{usuario.UPDATE_TIME | date}}</mat-cell>
       </ng-container>
       <ng-container matColumnDef="IS_ACTIVE">
         <mat-header-cell *matHeaderCellDef> IS_ACTIVE </mat-header-cell>
