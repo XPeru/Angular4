@@ -10,7 +10,8 @@ import { HomeMenuComponent } from './home-menu/home-menu.component';
 import { HomeSubMenuComponent } from './home-sub-menu/home-sub-menu.component';
 import { UsuarioComponent } from './modules/usuario/usuario.component';
 import { MatTableModule } from '@angular/material';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyHttpInterceptor } from './my-http-interceptor';
 import { UsuarioService } from './services/usuario.service';
 
 
@@ -40,7 +41,13 @@ const appRoutes: Routes = [
     MatTableModule,
     HttpClientModule
   ],
-  providers: [UsuarioService],
+  providers: [
+    { 
+      provide: HTTP_INTERCEPTORS, 
+      useClass: MyHttpInterceptor, 
+      multi: true 
+    },
+    UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
