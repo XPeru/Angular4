@@ -14,17 +14,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyHttpInterceptor } from './my-http-interceptor';
 import { UsuarioService } from './services/usuario.service';
 import { CookieService } from 'ngx-cookie-service';
-
-const appRoutes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'usuario',
-    component: UsuarioComponent
-  }
-];
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -36,10 +26,10 @@ const appRoutes: Routes = [
     UsuarioComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
     BrowserModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     { 
