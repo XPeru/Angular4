@@ -13,7 +13,7 @@ import { MatTableModule } from '@angular/material';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyHttpInterceptor } from './my-http-interceptor';
 import { UsuarioService } from './services/usuario.service';
-
+import { CookieService } from 'ngx-cookie-service';
 
 const appRoutes: Routes = [
   {
@@ -47,7 +47,9 @@ const appRoutes: Routes = [
       useClass: MyHttpInterceptor, 
       multi: true 
     },
-    UsuarioService],
+    CookieService,
+    UsuarioService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
