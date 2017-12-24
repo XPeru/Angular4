@@ -85,7 +85,8 @@ export class HomeComponent implements OnInit {
     "overlay back-red img-circle",
     "pie-image-menu-red",
     "Derechos de acceso",
-    "Creacion, edicion de los permisos de la aplicacion."
+    "Creacion, edicion de los permisos de la aplicacion.",
+    '/usuario/acceso'
   );
 
   tipoUsuario = new SubMenu(
@@ -93,7 +94,8 @@ export class HomeComponent implements OnInit {
     "overlay back-red img-circle",
     "pie-image-menu-red",
     "Tipos de usuario",
-    "Creacion y edicion de los tipos de usuario que pueden existir en la aplicacion."
+    "Creacion y edicion de los tipos de usuario que pueden existir en la aplicacion.",
+    "/usuario/tipo"
   );
 
   gestionUsuario = new SubMenu(
@@ -101,7 +103,8 @@ export class HomeComponent implements OnInit {
     "overlay back-red img-circle",
     "pie-image-menu-red",
     "Gestion de usuarios",
-    "Creacion y edicion de los usuarios finales de la aplicacion."
+    "Creacion y edicion de los usuarios finales de la aplicacion.",
+    "/usuario"
   );
 
   gestionAlmacen = new SubMenu(
@@ -109,7 +112,8 @@ export class HomeComponent implements OnInit {
     "overlay back-green img-circle",
     "pie-image-menu-green",
     "Gestion de almacenes",
-    "Creacion, edicion de almacenes."
+    "Creacion, edicion de almacenes.",
+    "/almacen"
   );
 
   escogerAlmacen = new SubMenu(
@@ -117,7 +121,8 @@ export class HomeComponent implements OnInit {
     "overlay back-green img-circle",
     "pie-image-menu-green",
     "Escoger almacen",
-    ""
+    "",
+    "/almacen/pick"
   );
 
   categoriaArticulo = new SubMenu(
@@ -125,7 +130,8 @@ export class HomeComponent implements OnInit {
     "overlay back-blue img-circle",
     "pie-image-menu-blue",
     "Categorias de articulos",
-    "Creacion, edicion de estas categorias."
+    "Creacion, edicion de estas categorias.",
+    "/articulo/categoria"
   );
 
   gestionArticulo = new SubMenu(
@@ -133,7 +139,8 @@ export class HomeComponent implements OnInit {
     "overlay back-blue img-circle",
     "pie-image-menu-blue",
     "Gestion de articulos",
-    "Creacion, edicion de articulos."
+    "Creacion, edicion de articulos.",
+    "/articulo"
   );
 
   cliente = new SubMenu(
@@ -141,7 +148,8 @@ export class HomeComponent implements OnInit {
     "overlay back-purple img-circle",
     "pie-image-menu-purple",
     "Clientes",
-    ""
+    "",
+    "/cliente"
   );
 
   proveedor = new SubMenu(
@@ -149,7 +157,8 @@ export class HomeComponent implements OnInit {
     "overlay back-purple img-circle",
     "pie-image-menu-purple",
     "Proveedores",
-    ""
+    "",
+    "/proveedor"
   );
 
   tipoPersona = new SubMenu(
@@ -157,7 +166,8 @@ export class HomeComponent implements OnInit {
     "overlay back-purple img-circle",
     "pie-image-menu-purple",
     "Tipos de persona",
-    ""
+    "",
+    "/tipopersona"
   );
 
   ingreso = new SubMenu(
@@ -165,7 +175,8 @@ export class HomeComponent implements OnInit {
     "overlay back-orange img-circle",
     "pie-image-menu-orange",
     "Ingresos",
-    "Creacion, edicion de ingresos."
+    "Creacion, edicion de ingresos.",
+    '/ingreso'
   );
 
   salida = new SubMenu(
@@ -173,7 +184,8 @@ export class HomeComponent implements OnInit {
     "overlay back-orange img-circle",
     "pie-image-menu-orange",
     "Salidas",
-    "Creacion, edicion de salidas."
+    "Creacion, edicion de salidas.",
+    "/salida"
   );
 
   tipoDocumento = new SubMenu(
@@ -181,7 +193,8 @@ export class HomeComponent implements OnInit {
     "overlay back-orange img-circle",
     "pie-image-menu-orange",
     "Tipos de documento",
-    ""
+    "",
+    "/tipodocumento"
   );
 
   estado = new SubMenu(
@@ -189,7 +202,8 @@ export class HomeComponent implements OnInit {
     "overlay back-orange img-circle",
     "pie-image-menu-orange",
     "Estado",
-    ""
+    "",
+    "/estado"
   );
 
 

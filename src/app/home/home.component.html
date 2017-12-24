@@ -1,6 +1,6 @@
 
 <div class ="row">
-  <app-home-menu [data]=dashboard (messageEvent)="receiveMessage($event)" routerLink="/usuario"></app-home-menu>
+  <app-home-menu [data]=dashboard (messageEvent)="receiveMessage($event)" routerLink="/dashboard"></app-home-menu>
   <app-home-menu [data]=usuario (messageEvent)="receiveMessage($event)"></app-home-menu>
   <app-home-menu [data]=almacen (messageEvent)="receiveMessage($event)"></app-home-menu>
   <app-home-menu [data]=articulo (messageEvent)="receiveMessage($event)"></app-home-menu>
@@ -8,31 +8,31 @@
 
 <div *ngIf="message === 'usuario'" class="back-red">
   <div class="row">
-    <app-home-sub-menu *ngFor="let submenu of userSubMenus" [data]=submenu></app-home-sub-menu>
+    <app-home-sub-menu *ngFor="let submenu of userSubMenus" [data]=submenu [routerLink]="[submenu.link]"></app-home-sub-menu>
   </div>
 </div>
 
 <div *ngIf="message === 'almacen'" class="back-green">
   <div class="row">
-    <app-home-sub-menu *ngFor="let submenu of almacenSubMenus" [data]=submenu></app-home-sub-menu>
+    <app-home-sub-menu *ngFor="let submenu of almacenSubMenus" [data]=submenu [routerLink]="[submenu.link]"></app-home-sub-menu>
   </div>
 </div>
 
 <div *ngIf="message === 'articulo'" class="back-blue">
   <div class="row">
-    <app-home-sub-menu *ngFor="let submenu of articuloSubMenus" [data]=submenu></app-home-sub-menu>
+    <app-home-sub-menu *ngFor="let submenu of articuloSubMenus" [data]=submenu [routerLink]="[submenu.link]"></app-home-sub-menu>
   </div>
 </div>
 
 <div *ngIf="message === 'cliprov'" class="back-purple">
   <div class="row">
-    <app-home-sub-menu *ngFor="let submenu of cliprovSubMenus" [data]=submenu></app-home-sub-menu>
+    <app-home-sub-menu *ngFor="let submenu of cliprovSubMenus" [data]=submenu [routerLink]="[submenu.link]"></app-home-sub-menu>
   </div>
 </div>
 
 <div *ngIf="message === 'movimiento'" class="back-orange">
   <div class="row">
-    <app-home-sub-menu *ngFor="let submenu of movimientoSubMenus" [data]=submenu></app-home-sub-menu>
+    <app-home-sub-menu *ngFor="let submenu of movimientoSubMenus" [data]=submenu [routerLink]="[submenu.link]"></app-home-sub-menu>
   </div>
 </div>
 
