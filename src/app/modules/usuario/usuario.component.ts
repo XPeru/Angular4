@@ -12,6 +12,7 @@ export class UsuarioComponent implements OnInit {
 
   dataSource = new UsuarioDataSource(this.usuarioService);
   displayedColumns = ["NOMBRE", "APELLIDOS", "IMAGEN", "CREATE_TIME", "UPDATE_TIME", "TIPO", "IS_ACTIVE"];
+
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
@@ -20,6 +21,7 @@ export class UsuarioComponent implements OnInit {
 }
 
 export class UsuarioDataSource extends DataSource<any> {
+
   constructor(private usuarioService: UsuarioService) {
     super();
   }

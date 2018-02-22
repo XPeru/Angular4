@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { HomeMenuComponent } from './home-menu/home-menu.component';
 import { HomeSubMenuComponent } from './home-sub-menu/home-sub-menu.component';
 import { UsuarioComponent } from './modules/usuario/usuario.component';
-import { MatTableModule } from '@angular/material';
+import { CustomMaterialModule } from './shared/custom-material.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyHttpInterceptor } from './my-http-interceptor';
 import { UsuarioService } from './services/usuario.service';
@@ -27,15 +27,15 @@ import { AppRoutingModule } from './/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    MatTableModule,
+    CustomMaterialModule,
     HttpClientModule,
     AppRoutingModule
   ],
   providers: [
-    { 
-      provide: HTTP_INTERCEPTORS, 
-      useClass: MyHttpInterceptor, 
-      multi: true 
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MyHttpInterceptor,
+      multi: true
     },
     CookieService,
     UsuarioService
