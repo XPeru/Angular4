@@ -1,20 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { CustomMaterialModule } from './shared/custom-material.module';
+import { InputFileComponent } from './shared/input-file/input-file.component';
+import { ByteFormatPipe } from './shared/input-file/byte-format.pipe';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyHttpInterceptor } from './my-http-interceptor';
+
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { HomeMenuComponent } from './home-menu/home-menu.component';
 import { HomeSubMenuComponent } from './home-sub-menu/home-sub-menu.component';
 import { UsuarioComponent } from './modules/usuario/usuario.component';
-import { CustomMaterialModule } from './shared/custom-material.module';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { MyHttpInterceptor } from './my-http-interceptor';
 import { UsuarioService } from './services/usuario.service';
 import { CookieService } from 'ngx-cookie-service';
-import { AppRoutingModule } from './/app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +32,9 @@ import { AppRoutingModule } from './/app-routing.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
     CustomMaterialModule,
     HttpClientModule,
     AppRoutingModule
