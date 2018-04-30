@@ -19,6 +19,8 @@ import { HomeSubMenuComponent } from './home-sub-menu/home-sub-menu.component';
 import { UsuarioComponent } from './modules/usuario/usuario.component';
 import { UsuarioService } from './services/usuario.service';
 import { CookieService } from 'ngx-cookie-service';
+import { UsuarioCreateComponent } from './modules/usuario/usuario-create/usuario-create.component';
+import { UsuarioEditComponent } from './modules/usuario/usuario-edit/usuario-edit.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { CookieService } from 'ngx-cookie-service';
     HomeComponent,
     HomeMenuComponent,
     HomeSubMenuComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    UsuarioCreateComponent,
+    UsuarioEditComponent
   ],
   imports: [
     BrowserModule,

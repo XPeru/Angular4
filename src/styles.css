@@ -112,3 +112,30 @@
 	opacity: 0;
 	padding: 0 10px;
 }
+
+.input-full-width {
+	width: 100%;
+}
+
+.input-half-width {
+	width: 50%;
+}
+
+.general-form {
+	min-width: 150px;
+	max-width: 500px;
+	width: 100%;
+}
+
+.loading-shade {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 56px;
+	right: 0;
+	background: rgba(0, 0, 0, 0.15);
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
