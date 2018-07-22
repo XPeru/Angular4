@@ -3,7 +3,6 @@ import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { catchError, finalize } from 'rxjs/operators';
 import { of } from 'rxjs/observable/of';
-import { MatSort } from '@angular/material';
 import { Usuario } from '../models/usuario';
 import { UsuarioService } from './usuario.service';
 
@@ -14,7 +13,7 @@ export class UsuarioDataSource implements DataSource<Usuario> {
 
     public loading$ = this.loadingUsuariosSubject.asObservable();
 
-    constructor(private usuarioService: UsuarioService) {};
+    constructor(private usuarioService: UsuarioService) {}
 
     loadUsuarios(filter: string, active: string, direction: string, pageIndex: number, pageSize: number) {
         this.loadingUsuariosSubject.next(true);

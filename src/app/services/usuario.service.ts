@@ -23,7 +23,7 @@ export class UsuarioService {
             .set('pageNumber', pageNumber.toString())
             .set('pageSize', pageSize.toString())
     });
-  };
+  }
 
   countUsuarios(filter = ''): Observable<number> {
     return this.http.get<number>(this.serviceUrl + '/count', {
