@@ -5,6 +5,7 @@ import { UsuarioComponent } from './modules/usuario/usuario.component';
 import { UsuarioCreateComponent } from './modules/usuario/usuario-create/usuario-create.component';
 import { UsuarioEditComponent } from './modules/usuario/usuario-edit/usuario-edit.component';
 import { AccesoComponent } from './modules/usuario/acceso/acceso.component';
+import { CreateAccesoComponent } from './modules/usuario/acceso/create-acceso/create-acceso.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'usuario/acceso',
     component: AccesoComponent
+  },
+  {
+    path: 'usuario/acceso/create',
+    component: CreateAccesoComponent
   }
 ];
 

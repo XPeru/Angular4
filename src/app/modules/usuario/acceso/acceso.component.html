@@ -1,5 +1,5 @@
 <h1>
-  <a [routerLink]="['/acceso-create']" mat-raised-button color="primary">
+  <a [routerLink]="['/usuario/acceso/create']" mat-raised-button color="primary">
     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
   </a>
 </h1>
@@ -32,9 +32,8 @@
       <ng-container matColumnDef="delete">
         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
         <mat-cell *matCellDef= "let acceso">
-          <button mat-raised-button color="warn" *ngIf="acceso.ID_ACCESO_USUARIO === idAccesoSelected" (click)="deleteAcceso(acceso)">
-            <i class="fa fa-toggle-on" aria-hidden="true" *ngIf="!acceso.is_active"></i>
-          <i class="fa fa-toggle-off" aria-hidden="true" *ngIf="acceso.is_active"></i>
+          <button mat-raised-button color="warn" *ngIf="acceso.ID_ACCESO_USUARIO === idAccesoSelected" (click)="deleteAcceso(acceso.ID_ACCESO_USUARIO)">
+            <i class="glyphicon glyphicon-remove"></i>
           </button>
         </mat-cell>
       </ng-container>
