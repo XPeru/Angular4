@@ -8,6 +8,18 @@ ol, ul {
 .gi-4x{font-size: 4em;}
 .gi-5x{font-size: 5em;}
 */
+.menu-option{
+  border: 1px solid black;
+  /* padding: 30px 20px 20px 20px; */
+  padding: 25px;
+  position: relative;
+  background-color: rgb(255, 255, 255) !important;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px grey;
+}
+.menu-box{
+  padding: 20px;
+}
 .center-icon {
     /*el padre debe tener position relative*/
     position: absolute;
@@ -86,6 +98,7 @@ ol, ul {
   .pie-image-menu-skyblue h2 {
     text-align: center;
     background-color: #5bc0de;
+    border-radius: 15px;
     /*muestra al glyphicon de color blanco*/
     color:white;
     position: absolute;
@@ -100,6 +113,7 @@ ol, ul {
   .pie-image-menu-green h2 {
     text-align: center;
     background-color:  #5cb85c;
+    border-radius: 15px;
     /*muestra al glyphicon de color blanco*/
     color:white;
     position: absolute;
@@ -114,6 +128,7 @@ ol, ul {
   .pie-image-menu-blue h2 {
     text-align: center;
     background-color: #428bca;
+    border-radius: 15px;
     /*muestra al glyphicon de color blanco*/
     color:white;
     position: absolute;
@@ -128,6 +143,7 @@ ol, ul {
   .pie-image-menu-red h2 {
     text-align: center;
     background-color: #d9534f;
+    border-radius: 15px;
     /*muestra al glyphicon de color blanco*/
     color:white;
     position: absolute;
@@ -142,6 +158,7 @@ ol, ul {
   .pie-image-menu-purple h2 {
     text-align: center;
     background-color: #aaafec;
+    border-radius: 15px;
     /*muestra al glyphicon de color blanco*/
     color:white;
     position: absolute;
@@ -156,6 +173,7 @@ ol, ul {
   .pie-image-menu-orange h2 {
     text-align: center;
     background-color: #fe6b40;
+    border-radius: 15px;
     /*muestra al glyphicon de color blanco*/
     color:white;
     position: absolute;

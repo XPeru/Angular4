@@ -1,15 +1,17 @@
-<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2">
-    <div class="container-image-menu" (click)="sendMessage()">
-        <img class="img-menu-principal img-circle"
-            [src]="data.src"
-            alt="data.alt"/>
-        <div class="overlay img-circle"
-        [ngClass]="data.background">
-            <i class="{{data.classIcon}}"></i>
+<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-8 col-xs-offset-2 menu-box">
+    <div class="menu-option">
+        <div class="container-image-menu" (click)="sendMessage()">
+            <img class="img-menu-principal img-circle"
+                [src]="data.src"
+                alt="data.alt"/>
+            <div class="overlay img-circle"
+            [ngClass]="data.background">
+                <i class="{{data.classIcon}}"></i>
+            </div>
         </div>
-    </div>
-    <div [ngClass]="data.color">
-        <h2>{{data.title}}</h2>
-        <p>{{data.subtitle}}</p>
+        <div [ngClass]="data.color">
+            <h2>{{data.title}}</h2>
+            <p>{{data.subtitle}}</p>
+        </div>
     </div>
 </div>
