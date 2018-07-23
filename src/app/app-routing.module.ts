@@ -6,6 +6,7 @@ import { UsuarioCreateComponent } from './modules/usuario/usuario-create/usuario
 import { UsuarioEditComponent } from './modules/usuario/usuario-edit/usuario-edit.component';
 import { AccesoComponent } from './modules/usuario/acceso/acceso.component';
 import { CreateAccesoComponent } from './modules/usuario/acceso/create-acceso/create-acceso.component';
+import { EditAccesoComponent } from './modules/usuario/acceso/edit-acceso/edit-acceso.component';
 
 const appRoutes: Routes = [
   {
@@ -31,6 +32,10 @@ const appRoutes: Routes = [
   {
     path: 'usuario/acceso/create',
     component: CreateAccesoComponent
+  },
+  {
+    path: 'usuario/acceso/edit/:id',
+    component: EditAccesoComponent
   }
 ];
 

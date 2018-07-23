@@ -24,7 +24,7 @@
       <ng-container matColumnDef="edit">
         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
         <mat-cell *matCellDef= "let acceso">
-          <a [routerLink]="['/acceso-edit', acceso.ID_ACCESO_USUARIO]" mat-raised-button color="accent" *ngIf="acceso.ID_ACCESO_USUARIO === idAccesoSelected">
+          <a [routerLink]="['/usuario/acceso/edit', acceso.ID_ACCESO_USUARIO]" mat-raised-button color="accent" *ngIf="acceso.ID_ACCESO_USUARIO === idAccesoSelected">
             <i class="glyphicon glyphicon-pencil"></i>
           </a>
         </mat-cell>
