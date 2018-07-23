@@ -1,9 +1,10 @@
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { UsuarioComponent } from './modules/usuario/usuario.component';
 import { UsuarioCreateComponent } from './modules/usuario/usuario-create/usuario-create.component';
 import { UsuarioEditComponent } from './modules/usuario/usuario-edit/usuario-edit.component';
+import { AccesoComponent } from './modules/usuario/acceso/acceso.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'usuario-edit/:id',
     component: UsuarioEditComponent
+  },
+  {
+    path: 'acceso',
+    component: AccesoComponent
   }
 ];
 
