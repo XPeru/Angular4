@@ -24,7 +24,7 @@ const appRoutes: Routes = [
     component: UsuarioEditComponent
   },
   {
-    path: 'acceso',
+    path: 'usuario/acceso',
     component: AccesoComponent
   }
 ];

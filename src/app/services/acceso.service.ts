@@ -6,7 +6,7 @@ import { Acceso } from '../models/acceso';
 @Injectable()
 export class AccesoService {
 
-  private serviceUrl = '/api/acceso';
+  private serviceUrl = '/api/accesousuario';
 
   constructor(private http: HttpClient) {}
 

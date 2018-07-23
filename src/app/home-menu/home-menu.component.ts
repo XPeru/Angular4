@@ -8,7 +8,7 @@ import { Menu } from './menu';
   styleUrls: ['./home-menu.component.css']
 })
 export class HomeMenuComponent implements OnInit {
-  @Input() data : Menu;
+  @Input() data: Menu;
   @Output() messageEvent = new EventEmitter<string>();
 
   sendMessage() {
@@ -19,6 +19,6 @@ export class HomeMenuComponent implements OnInit {
   ngOnInit() {
   }
 
-     
+
 
 }

@@ -22,6 +22,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { UsuarioCreateComponent } from './modules/usuario/usuario-create/usuario-create.component';
 import { UsuarioEditComponent } from './modules/usuario/usuario-edit/usuario-edit.component';
 import { AccesoComponent } from './modules/usuario/acceso/acceso.component';
+import { AccesoService } from './services/acceso.service';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { AccesoComponent } from './modules/usuario/acceso/acceso.component';
       multi: true
     },
     CookieService,
-    UsuarioService
+    UsuarioService,
+    AccesoService
   ],
   bootstrap: [AppComponent]
 })
