@@ -1,3 +1,19 @@
+.fill-remaining-space {
+	/* This fills the remaining space, by using flexbox. 
+		Every toolbar row uses a flexbox row layout. */
+	flex: 1 1 auto;
+}
+
+.navbar{
+	color: #fff;
+}
+/* 
+.navbar button span{
+	font-size: 20px;
+	font-family: cursive;
+} */
+
+/*
 .navbar-top-links {
 	margin-right: 0;
 }
@@ -65,22 +81,6 @@
 	padding: 15px;
 }
 
-
-.sidebar ul li a.active {
-	/*background-color: #141617;*/
-	background-image: -webkit-gradient(linear, left 0%, left 100%, from(#9fd4ef), to(#73c1e8));
-}
-.sidebar ul li .accordion-toogle .collapsed { 
-	font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-	content: "\e114";    /* adjust as needed, taken from bootstrap.css */
-	float: right;        /* adjust as needed */  
-}
-
-.sidebar ul li .collapsed:after { 
-	content: "\e080";    /* adjust as needed, taken from bootstrap.css */
-	/*float: right;         adjust as needed   */
-}
-
 .sidebar .glyphicon-chevron-left {
 	float: right;
 }
@@ -118,7 +118,6 @@
 
 .sidebar {
 	min-height: 100%;
-	/*color: #aaa;*/
 }
 
 .sidebar.ng-hide-add, .sidebar.ng-hide-remove {
@@ -147,4 +146,4 @@
 	.navbar-top-links .dropdown-alerts {
 		margin-left: auto;
 	}
-}
+}*/
