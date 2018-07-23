@@ -25,6 +25,7 @@ import { AccesoComponent } from './modules/usuario/acceso/acceso.component';
 import { AccesoService } from './services/acceso.service';
 import { CreateAccesoComponent } from './modules/usuario/acceso/create-acceso/create-acceso.component';
 import { EditAccesoComponent } from './modules/usuario/acceso/edit-acceso/edit-acceso.component';
+import { TipoComponent } from './modules/usuario/tipo/tipo.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { EditAccesoComponent } from './modules/usuario/acceso/edit-acceso/edit-a
     UsuarioEditComponent,
     AccesoComponent,
     CreateAccesoComponent,
-    EditAccesoComponent
+    EditAccesoComponent,
+    TipoComponent
   ],
   imports: [
     BrowserModule,
