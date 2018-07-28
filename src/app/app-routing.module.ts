@@ -10,6 +10,9 @@ import { EditAccesoComponent } from './modules/usuario/acceso/edit-acceso/edit-a
 import { TipoComponent } from './modules/usuario/tipo/tipo.component';
 import { CreateTipoComponent } from './modules/usuario/tipo/create-tipo/create-tipo.component';
 import { EditTipoComponent } from './modules/usuario/tipo/edit-tipo/edit-tipo.component';
+import { CategoriaComponent } from './modules/articulo/categoria/categoria.component';
+import { CreateCategoriaComponent } from './modules/articulo/categoria/create-categoria/create-categoria.component';
+import { EditCategoriaComponent } from './modules/articulo/categoria/edit-categoria/edit-categoria.component';
 
 const appRoutes: Routes = [
   {
@@ -51,6 +54,18 @@ const appRoutes: Routes = [
   {
     path: 'usuario/tipo/edit/:id',
     component: EditTipoComponent
+  },
+  {
+    path: 'articulo/categoria',
+    component: CategoriaComponent
+  },
+  {
+    path: 'articulo/categoria/create',
+    component: CreateCategoriaComponent
+  },
+  {
+    path: 'articulo/categoria/edit/:id',
+    component: EditCategoriaComponent
   }
 ];
 

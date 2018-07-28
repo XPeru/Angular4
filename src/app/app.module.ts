@@ -29,7 +29,11 @@ import { TipoComponent } from './modules/usuario/tipo/tipo.component';
 import { CreateTipoComponent } from './modules/usuario/tipo/create-tipo/create-tipo.component';
 import { TipoService } from './services/tipo.service';
 import { EditTipoComponent } from './modules/usuario/tipo/edit-tipo/edit-tipo.component';
-
+import { ArticuloComponent } from './modules/articulo/articulo.component';
+import { CategoriaComponent } from './modules/articulo/categoria/categoria.component';
+import { CreateCategoriaComponent } from './modules/articulo/categoria/create-categoria/create-categoria.component';
+import { EditCategoriaComponent } from './modules/articulo/categoria/edit-categoria/edit-categoria.component';
+import { CategoriaService } from './services/categoria.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,11 @@ import { EditTipoComponent } from './modules/usuario/tipo/edit-tipo/edit-tipo.co
     EditAccesoComponent,
     TipoComponent,
     CreateTipoComponent,
-    EditTipoComponent
+    EditTipoComponent,
+    ArticuloComponent,
+    CategoriaComponent,
+    CreateCategoriaComponent,
+    EditCategoriaComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +74,8 @@ import { EditTipoComponent } from './modules/usuario/tipo/edit-tipo/edit-tipo.co
     CookieService,
     UsuarioService,
     AccesoService,
-    TipoService
+    TipoService,
+    CategoriaService
   ],
   bootstrap: [AppComponent]
 })
