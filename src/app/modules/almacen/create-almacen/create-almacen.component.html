@@ -1,0 +1,16 @@
+<div class="container">
+    <form (ngSubmit)="saveAlmacen()" #almacenForm="ngForm" class="general-form">
+  
+      <mat-card-subtitle>Crear un almacen:</mat-card-subtitle>
+      <br/>
+  
+      <mat-form-field class="input-full-width">
+        <input matInput placeholder="Codigo" [(ngModel)]="almacen.CODIGO_ALMACEN" name="CODIGO_ALMACEN" required>      
+      </mat-form-field>
+      <mat-form-field class="input-full-width">
+        <input matInput placeholder="Ubicacion" [(ngModel)]="almacen.UBICACION" name="UBICACION" required>      
+      </mat-form-field>
+  
+      <button type="submit" [disabled]="!almacenForm.form.valid" mat-raised-button>Crear</button>
+    </form>
+  </div>
