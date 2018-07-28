@@ -26,6 +26,9 @@ import { AccesoService } from './services/acceso.service';
 import { CreateAccesoComponent } from './modules/usuario/acceso/create-acceso/create-acceso.component';
 import { EditAccesoComponent } from './modules/usuario/acceso/edit-acceso/edit-acceso.component';
 import { TipoComponent } from './modules/usuario/tipo/tipo.component';
+import { CreateTipoComponent } from './modules/usuario/tipo/create-tipo/create-tipo.component';
+import { TipoService } from './services/tipo.service';
+import { EditTipoComponent } from './modules/usuario/tipo/edit-tipo/edit-tipo.component';
 
 
 @NgModule({
@@ -41,7 +44,9 @@ import { TipoComponent } from './modules/usuario/tipo/tipo.component';
     AccesoComponent,
     CreateAccesoComponent,
     EditAccesoComponent,
-    TipoComponent
+    TipoComponent,
+    CreateTipoComponent,
+    EditTipoComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,8 @@ import { TipoComponent } from './modules/usuario/tipo/tipo.component';
     },
     CookieService,
     UsuarioService,
-    AccesoService
+    AccesoService,
+    TipoService
   ],
   bootstrap: [AppComponent]
 })
