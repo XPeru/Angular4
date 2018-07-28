@@ -1,0 +1,14 @@
+<div class="container">
+  <form (ngSubmit)="updateCategoria()" #categoriaForm="ngForm" class="general-form">
+
+    <mat-card-subtitle>Editar el categoria:</mat-card-subtitle>
+    <br/>
+
+    <mat-form-field class="input-full-width">
+      <input matInput placeholder="Nom" [(ngModel)]="currentCategoria.DESCRIPCION" name="DESCRIPCION" required>      
+    </mat-form-field>
+
+    <button type="submit" [disabled]="!categoriaForm.form.valid" mat-raised-button>Actualizar</button>
+  </form>
+</div>
+  

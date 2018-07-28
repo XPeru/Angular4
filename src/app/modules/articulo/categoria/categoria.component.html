@@ -1,0 +1,47 @@
+<h1>
+    <a [routerLink]="['/articulo/categoria/create']" mat-raised-button color="primary">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </a>
+  </h1>
+  
+  <div class="mat-elevation-z8">
+    <mat-input-container class="input-half-width">
+      <input matInput placeholder="Filtrar categorias por descripcion:" #input>
+    </mat-input-container>
+    <div class="loading-shade" *ngIf="dataSource.loading$ | async">
+      <mat-spinner></mat-spinner>
+    </div>
+  
+    <mat-table [dataSource]="dataSource" matSort matSortActive="DESCRIPCION" matSortDisableClear matSortDirection="asc">
+        <ng-container matColumnDef="ID_CATEGORIA">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID_CATEGORIA </mat-header-cell>
+          <mat-cell *matCellDef= "let categoria"> {{categoria.ID_CATEGORIA}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="DESCRIPCION">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Descripcion </mat-header-cell>
+          <mat-cell *matCellDef= "let categoria"> {{categoria.DESCRIPCION}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="edit">
+          <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+          <mat-cell *matCellDef= "let categoria">
+            <a [routerLink]="['/articulo/categoria/edit', categoria.ID_CATEGORIA]" mat-raised-button color="accent" *ngIf="categoria.ID_CATEGORIA === idCategoriaSelected">
+              <i class="glyphicon glyphicon-pencil"></i>
+            </a>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="delete">
+          <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+          <mat-cell *matCellDef= "let categoria">
+            <button mat-raised-button color="warn" *ngIf="categoria.ID_CATEGORIA === idCategoriaSelected" (click)="deleteCategoria(categoria.ID_CATEGORIA)">
+              <i class="glyphicon glyphicon-remove"></i>
+            </button>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"
+                  (click)="setSelectedId(row)"
+                  [ngClass]="{'bg-info': row.ID_CATEGORIA === idCategoriaSelected}"></mat-row>
+    </mat-table>
+  
+    <mat-paginator [length]=countCategorias [pageSize]="10" [pageSizeOptions]="[10, 20, 50]"></mat-paginator>
+  </div>
