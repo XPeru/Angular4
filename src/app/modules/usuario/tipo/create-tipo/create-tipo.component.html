@@ -1,0 +1,13 @@
+<div class="container">
+    <form (ngSubmit)="saveTipo()" #tipoForm="ngForm" class="general-form">
+  
+      <mat-card-subtitle>Crear un tipo:</mat-card-subtitle>
+      <br/>
+  
+      <mat-form-field class="input-full-width">
+        <input matInput placeholder="Tipo" [(ngModel)]="tipo.TIPO" name="TIPO" required>      
+      </mat-form-field>
+  
+      <button type="submit" [disabled]="!tipoForm.form.valid" mat-raised-button>Crear</button>
+    </form>
+  </div>

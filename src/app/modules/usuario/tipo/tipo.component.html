@@ -1,3 +1,47 @@
-<p>
-  tipo works!
-</p>
+<h1>
+    <a [routerLink]="['/usuario/tipo/create']" mat-raised-button color="primary">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </a>
+  </h1>
+  
+  <div class="mat-elevation-z8">
+    <mat-input-container class="input-half-width">
+      <input matInput placeholder="Filtrar los tipos:" #input>
+    </mat-input-container>
+    <div class="loading-shade" *ngIf="dataSource.loading$ | async">
+      <mat-spinner></mat-spinner>
+    </div>
+  
+    <mat-table [dataSource]="dataSource" matSort matSortActive="TIPO" matSortDisableClear matSortDirection="asc">
+        <ng-container matColumnDef="ID_TIPO_USUARIO">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ID_TIPO_USUARIO </mat-header-cell>
+          <mat-cell *matCellDef= "let tipo"> {{tipo.ID_TIPO_USUARIO}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="TIPO">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> TIPO </mat-header-cell>
+          <mat-cell *matCellDef= "let tipo"> {{tipo.TIPO}}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="edit">
+          <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+          <mat-cell *matCellDef= "let tipo">
+            <a [routerLink]="['/usuario/tipo/edit', tipo.ID_TIPO_USUARIO]" mat-raised-button color="accent" *ngIf="tipo.ID_TIPO_USUARIO === idTipoSelected">
+              <i class="glyphicon glyphicon-pencil"></i>
+            </a>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="delete">
+          <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+          <mat-cell *matCellDef= "let tipo">
+            <button mat-raised-button color="warn" *ngIf="tipo.ID_TIPO_USUARIO === idTipoSelected" (click)="deleteTipo(tipo.ID_TIPO_USUARIO)">
+              <i class="glyphicon glyphicon-remove"></i>
+            </button>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"
+                  (click)="setSelectedId(row)"
+                  [ngClass]="{'bg-info': row.ID_TIPO_USUARIO === idTipoSelected}"></mat-row>
+    </mat-table>
+  
+    <mat-paginator [length]=countTipos [pageSize]="10" [pageSizeOptions]="[10, 20, 50]"></mat-paginator>
+  </div>
