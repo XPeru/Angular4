@@ -34,6 +34,10 @@ import { CategoriaComponent } from './modules/articulo/categoria/categoria.compo
 import { CreateCategoriaComponent } from './modules/articulo/categoria/create-categoria/create-categoria.component';
 import { EditCategoriaComponent } from './modules/articulo/categoria/edit-categoria/edit-categoria.component';
 import { CategoriaService } from './services/categoria.service';
+import { AlmacenComponent } from './modules/almacen/almacen.component';
+import { EditAlmacenComponent } from './modules/almacen/edit-almacen/edit-almacen.component';
+import { CreateAlmacenComponent } from './modules/almacen/create-almacen/create-almacen.component';
+import { AlmacenService } from './services/almacen.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +58,10 @@ import { CategoriaService } from './services/categoria.service';
     ArticuloComponent,
     CategoriaComponent,
     CreateCategoriaComponent,
-    EditCategoriaComponent
+    EditCategoriaComponent,
+    AlmacenComponent,
+    EditAlmacenComponent,
+    CreateAlmacenComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +82,8 @@ import { CategoriaService } from './services/categoria.service';
     UsuarioService,
     AccesoService,
     TipoService,
-    CategoriaService
+    CategoriaService,
+    AlmacenService
   ],
   bootstrap: [AppComponent]
 })

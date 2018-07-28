@@ -13,6 +13,9 @@ import { EditTipoComponent } from './modules/usuario/tipo/edit-tipo/edit-tipo.co
 import { CategoriaComponent } from './modules/articulo/categoria/categoria.component';
 import { CreateCategoriaComponent } from './modules/articulo/categoria/create-categoria/create-categoria.component';
 import { EditCategoriaComponent } from './modules/articulo/categoria/edit-categoria/edit-categoria.component';
+import { AlmacenComponent } from './modules/almacen/almacen.component';
+import { CreateAlmacenComponent } from './modules/almacen/create-almacen/create-almacen.component';
+import { EditAlmacenComponent } from './modules/almacen/edit-almacen/edit-almacen.component';
 
 const appRoutes: Routes = [
   {
@@ -66,6 +69,18 @@ const appRoutes: Routes = [
   {
     path: 'articulo/categoria/edit/:id',
     component: EditCategoriaComponent
+  },
+  {
+    path: 'almacen',
+    component: AlmacenComponent
+  },
+  {
+    path: 'almacen-create',
+    component: CreateAlmacenComponent
+  },
+  {
+    path: 'almacen-edit/:id',
+    component: EditAlmacenComponent
   }
 ];
 
